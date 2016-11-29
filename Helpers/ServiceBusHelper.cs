@@ -37,6 +37,8 @@ using System.Threading;
 using Microsoft.ServiceBus;
 using Microsoft.ServiceBus.Messaging;
 using Microsoft.Azure.NotificationHubs;
+using Higi.Core.Security;
+using Higi.Core.Security.Clients;
 
 #endregion
 
@@ -183,6 +185,7 @@ namespace Microsoft.WindowsAzure.CAT.ServiceBusExplorer
         private string currentSharedAccessKeyName;
         private string currentSharedAccessKey;
         private TransportType currentTransportType;
+        private KeyVaultHelper _keyVaultHelper = KeyVaultHelper.BuildKeyVaultHelperAsync(new SharedKeyVaultClient(), "higi-shared-sb-kv-encryption-key-name").GetAwaiter().GetResult();
         #endregion
 
         #region Private Static Fields
@@ -4811,35 +4814,36 @@ namespace Microsoft.WindowsAzure.CAT.ServiceBusExplorer
             var inboundMessage = messageToRead.Clone();
             try
             {
-                stream = inboundMessage.GetBody<Stream>();
+                stream = inboundMessage.GetDecryptedStream(_keyVaultHelper);
                 if (stream != null)
                 {
-                    var element = new BinaryMessageEncodingBindingElement
-                    {
-                        ReaderQuotas = new XmlDictionaryReaderQuotas
-                        {
-                            MaxArrayLength = int.MaxValue,
-                            MaxBytesPerRead = int.MaxValue,
-                            MaxDepth = int.MaxValue,
-                            MaxNameTableCharCount = int.MaxValue,
-                            MaxStringContentLength = int.MaxValue
-                        }
-                    };
-                    var encoderFactory = element.CreateMessageEncoderFactory();
-                    var encoder = encoderFactory.Encoder;
-                    var stringBuilder = new StringBuilder();
-                    var message = encoder.ReadMessage(stream, MaxBufferSize);
-                    using (var reader = message.GetReaderAtBodyContents())
-                    {
-                        // The XmlWriter is used just to indent the XML message
-                        var settings = new XmlWriterSettings { Indent = true };
-                        using (var writer = XmlWriter.Create(stringBuilder, settings))
-                        {
-                            writer.WriteNode(reader, true);
-                        }
-                    }
-                    messageText = stringBuilder.ToString();
-                    bodyType = BodyType.Wcf;
+                    //var element = new BinaryMessageEncodingBindingElement
+                    //{
+                    //    ReaderQuotas = new XmlDictionaryReaderQuotas
+                    //    {
+                    //        MaxArrayLength = int.MaxValue,
+                    //        MaxBytesPerRead = int.MaxValue,
+                    //        MaxDepth = int.MaxValue,
+                    //        MaxNameTableCharCount = int.MaxValue,
+                    //        MaxStringContentLength = int.MaxValue
+                    //    }
+                    //};
+                    //var encoderFactory = element.CreateMessageEncoderFactory();
+                    //var encoder = encoderFactory.Encoder;
+                    //var stringBuilder = new StringBuilder();
+                    //var message = encoder.ReadMessage(stream, MaxBufferSize);
+                    //using (var reader = message.GetReaderAtBodyContents())
+                    //{
+                    //    // The XmlWriter is used just to indent the XML message
+                    //    var settings = new XmlWriterSettings { Indent = true };
+                    //    using (var writer = XmlWriter.Create(stringBuilder, settings))
+                    //    {
+                    //        writer.WriteNode(reader, true);
+                    //    }
+                    //}
+                    //messageText = stringBuilder.ToString();
+                    //bodyType = BodyType.Wcf;
+                    messageText = new StreamReader(stream).ReadToEnd();
                 }
             }
             catch (Exception)

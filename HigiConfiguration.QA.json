@@ -1,0 +1,355 @@
+﻿{
+  "AllowChange": false,
+  "shared": {
+    "environment": "qa",
+    "apiUri": "https://api-qa.superbuddytime.com",
+    "aadInstance": "https://login.microsoftonline.com/",
+    "portalUri": "https://web-qa.superbuddytime.com",
+    "aadTenant": "higidevcore.onmicrosoft.com",
+    "aadTenantId": "6681a371-3129-4587-af1c-f0eebe90d1cf",
+    "aadService": {
+      "resourceId": "https://higidevcore.onmicrosoft.com/HigiService"
+    },
+    "aadClient": {
+      "clientId": "2493cdcc-82c4-40cd-9e6b-44d5751d3a54",
+      "appKey": "fZfLqnP0SZ1etAJjbYweXmtdkqoo+KYn3H/CuYUMQbs="
+    },
+    "keyVaultUri": "https://higiqauserkeyvault.vault.azure.net:443/",
+    "keyVaultClientId": "4a1f74d5-cc0a-4ea2-872a-a8ae579e0239",
+    "keyVaultClientSecret": "wp+zBEhCxsDb/wdAtEDjis1d+VuHALpfkcp95jyM6tQ=",
+    "serviceBusConnectionString": "Endpoint=sb://higi-qa-core-eventmessaging.servicebus.windows.net/;SharedAccessKeyName=RootManageSharedAccessKey;SharedAccessKey=8U0Pwy/HdyVP7/zp0IZwj7xoMZuB/6Mi86uQ0Zkiwqo=",
+    "serviceBusSecondaryConnection": "Endpoint=sb://higi-qa-core-eventbackup.servicebus.windows.net/;SharedAccessKeyName=RootManageSharedAccessKey;SharedAccessKey=tJE3wcvbMASL1COsNerozSG+6JNusOG8p6PnVzLVK54=",
+    "primaryLoggingConnectionString": "Endpoint=sb://higi-qa-core-logmessaging.servicebus.windows.net/;SharedAccessKeyName=RootManageSharedAccessKey;SharedAccessKey=axZzl8MhIvpnnlNtAjFYKdTLSWusbhLngriUgnCsPpA=",
+    "secondaryLoggingConnectionString": "Endpoint=sb://higi-qa-core-backupmessaging.servicebus.windows.net/;SharedAccessKeyName=RootManageSharedAccessKey;SharedAccessKey=p9E7KEbd8bkkKKAwNNTWYA0tl3tuXvvdZemkw0p3rUQ=",
+    "azureRedisCacheConnectionString": "qapicache.redis.cache.windows.net:6380,password=MA8w4wptTqA1QnBufu5DOBKKDYEkDRrfLftY6Nmfh20=,ssl=True,abortConnect=False",
+    "webJobStorageConnectionString": "DefaultEndpointsProtocol=https;AccountName=coresharedwebjobqa;AccountKey=Z/Vcnh8ly7iOymq3fT+evxwBrVcZSLrrYCgwXZLUR4xiFCO2jh3ZFjx6JVOzmWvBvv4rLmP2JWSmuv0gQQe3eQ==",
+    "returnDetailedErrorsFromApi": true,
+    "mandrill": {
+      "sendTemplateUrl": "https://mandrillapp.com/api/1.0/messages/send-template.json",
+      "apiKeys": {
+        "higi": "y8GvscSoZOZqYtZYnQ3hfA",
+        "loblaws": "UQHY2_lixIXquNkyDhAbnQ"
+      }
+    },
+    "portalBaseUris": {
+      "higiLegacy": "https://webqa.superbuddytime.com",
+      "higi": "https://web-qa.superbuddytime.com",
+      "loblaws": "https://loblaw-web-qa.superbuddytime.com"
+    },
+    "sqlServer": {
+      "name": "higi-qa.database.windows.net",
+      "userId": "higiadmin",
+      "userPassword": "H!g!Score999"
+    },
+    "stripedAzureStorage": [
+      {
+        "accountName": "coresharedqa001",
+        "accountKey": "TVjrGIM+dsM8NBhO2Lyo8fo2CSNF9dU2Kj5RTJUf970FvOM35Csp669mfm8Ccj7/lJlwfEyKSR8kqvDCbLhNnA=="
+      },
+      {
+        "accountName": "coresharedqa002",
+        "accountKey": "7WOfRkeUomqTaALIUTlB6LXVeX/athQsKg2BX8n0Kg5/RNZFnfGWwt2pUyTjr9E2VpXQ8wrO29xy9avbwcQ3ug=="
+      },
+      {
+        "accountName": "coresharedqa003",
+        "accountKey": "wqumnUSJ1KdxZCLfaLULeXZhd3Py3TBNG3E+belwBSYg4GQ6GYn8vTeRJeCnvm4LH41tigeuduvRlrEM72C7ng=="
+      },
+      {
+        "accountName": "coresharedqa004",
+        "accountKey": "tgD5Kd9DamDGZ4KQDFLE77YFWpOP4y+rggjEOeELcyMmASkRXTqLKekxHlM81bmncVdbunauNMx6bDmUjed0Yw=="
+      },
+      {
+        "accountName": "coresharedqa005",
+        "accountKey": "0Dlay6lTVwmywEU5evi3LhKvPqflEWDIVKZWj72p3OietknkdX21Dv7N567hTLKh9lR+7Xi8zDMBWmnjUC69lA=="
+      },
+      {
+        "accountName": "coresharedqa006",
+        "accountKey": "KjHPguH4apD2dVSFhp8NFBSdQRvQalyWorNHO97wkkUwmhWZvteXNIODIpiS5IpUCynf7VF6BNqq7MhJ8VoXhw=="
+      },
+      {
+        "accountName": "coresharedqa007",
+        "accountKey": "M5IkSOODG487Yxy/6DcjAm4e45gUe4s3JmSR3+Gcsih1WR67p7OpHMnP/vf0622Ia81IBQmJd+l+2KEQkpxAzA=="
+      },
+      {
+        "accountName": "coresharedqa008",
+        "accountKey": "agb1/B04htMYgE6CCX+n1GXwyM07TvsF2CUfzCpeEK52aw6ml74Ec4NKguWaqxloZRYg3jhx3zKx997LYXhkvA=="
+      },
+      {
+        "accountName": "coresharedqa009",
+        "accountKey": "3shALv+LvirBq5eqStUfsr2+kbFZNbYlgCjyhBhTShxmQdLgHYei0RwezmEz4+mcuYumJLcENXkfd3pnn7I5PA=="
+      },
+      {
+        "accountName": "coresharedqa010",
+        "accountKey": "P9KXXjUXH+yFRgqBx4dCJCr4FpHLA+fDL3u+9Ws92qYtbR5Hg98Jl6cE/CZGXA6pNNHEF3/wqgUjYQLCsXkd5A=="
+      }
+    ],
+    "nonStripedAzureStorage": [
+      {
+        "accountName": "coresharedqa",
+        "accountKey": "5i3rdlaTzgzaqe/SDp8JO3PbqQeaeQrZ0+2+/OTpPwCzv++XNbiGgVYcUx+XmQFMyVB0S4H492A5dJvT6e6vHw=="
+      }
+    ],
+    "keyVaultAccount": {
+      "uri": "https://higiqauserkeyvault.vault.azure.net:443/",
+      "clientId": "4a1f74d5-cc0a-4ea2-872a-a8ae579e0239",
+      "clientSecret": "wp+zBEhCxsDb/wdAtEDjis1d+VuHALpfkcp95jyM6tQ="
+    },
+
+    "stripedKeyVaultAccounts": [
+      {
+        "uri": "https://higiqauserkeyvault001.vault.azure.net:443/",
+        "clientId": "4a1f74d5-cc0a-4ea2-872a-a8ae579e0239",
+        "clientSecret": "wp+zBEhCxsDb/wdAtEDjis1d+VuHALpfkcp95jyM6tQ="
+      },
+      {
+        "uri": "https://higiqauserkeyvault002.vault.azure.net:443/",
+        "clientId": "4a1f74d5-cc0a-4ea2-872a-a8ae579e0239",
+        "clientSecret": "wp+zBEhCxsDb/wdAtEDjis1d+VuHALpfkcp95jyM6tQ="
+      },
+      {
+        "uri": "https://higiqauserkeyvault003.vault.azure.net:443/",
+        "clientId": "4a1f74d5-cc0a-4ea2-872a-a8ae579e0239",
+        "clientSecret": "wp+zBEhCxsDb/wdAtEDjis1d+VuHALpfkcp95jyM6tQ="
+      },
+      {
+        "uri": "https://higiqauserkeyvault004.vault.azure.net:443/",
+        "clientId": "4a1f74d5-cc0a-4ea2-872a-a8ae579e0239",
+        "clientSecret": "wp+zBEhCxsDb/wdAtEDjis1d+VuHALpfkcp95jyM6tQ="
+      },
+      {
+        "uri": "https://higiqauserkeyvault005.vault.azure.net:443/",
+        "clientId": "4a1f74d5-cc0a-4ea2-872a-a8ae579e0239",
+        "clientSecret": "wp+zBEhCxsDb/wdAtEDjis1d+VuHALpfkcp95jyM6tQ="
+      },
+      {
+        "uri": "https://higiqauserkeyvault006.vault.azure.net:443/",
+        "clientId": "4a1f74d5-cc0a-4ea2-872a-a8ae579e0239",
+        "clientSecret": "wp+zBEhCxsDb/wdAtEDjis1d+VuHALpfkcp95jyM6tQ="
+      },
+      {
+        "uri": "https://higiqauserkeyvault007.vault.azure.net:443/",
+        "clientId": "4a1f74d5-cc0a-4ea2-872a-a8ae579e0239",
+        "clientSecret": "wp+zBEhCxsDb/wdAtEDjis1d+VuHALpfkcp95jyM6tQ="
+      },
+      {
+        "uri": "https://higiqauserkeyvault008.vault.azure.net:443/",
+        "clientId": "4a1f74d5-cc0a-4ea2-872a-a8ae579e0239",
+        "clientSecret": "wp+zBEhCxsDb/wdAtEDjis1d+VuHALpfkcp95jyM6tQ="
+      },
+      {
+        "uri": "https://higiqauserkeyvault009.vault.azure.net:443/",
+        "clientId": "4a1f74d5-cc0a-4ea2-872a-a8ae579e0239",
+        "clientSecret": "wp+zBEhCxsDb/wdAtEDjis1d+VuHALpfkcp95jyM6tQ="
+      },
+      {
+        "uri": "https://higiqauserkeyvault010.vault.azure.net:443/",
+        "clientId": "4a1f74d5-cc0a-4ea2-872a-a8ae579e0239",
+        "clientSecret": "wp+zBEhCxsDb/wdAtEDjis1d+VuHALpfkcp95jyM6tQ="
+      }
+    ]
+  },
+
+  "ads": {
+    "serviceClientApiToken": "uzb5UZYQJ3qrSUvnDVBy+9KsdcXmSSjv/vNxfgLb5FMVXNCSh76+aD1Qid8dGNoysnSSY4XZzo2aYNRmshuHz8upybqY5vfpnNqV17008toBAA=="
+  },
+
+  "activity": {
+    "serviceUri": "https://higi-qa-core-activity.azurewebsites.net"
+  },
+
+  "authentication": {
+    "serviceUri": "https://higi-qa-core-authentication.azurewebsites.net",
+    "resourceServerId": "eef78bea7c89428e98db6ad2cdcfd775",
+    "resourceServerSecret": "f_gqxS-3r28UxTHN0WVAcWqc8zgWJIdXKkMJ-2pT1bg"
+  },
+
+  "bcsdk": {
+    "serviceUri": "https://higi-qa-bcsdk.azurewebsites.net",
+    "sqlServer": {
+      "name": "higi-qa-bcsdk.database.windows.net",
+      "userId": "bcsdkadmin",
+      "userPassword": "64F03755w8Cd3D314eEc",
+      "dbname": "higibcsdk"
+    }
+  },
+
+  "challenge": {
+
+  },
+
+  "chatter": {
+    "serviceUri": "https://higi-qa-core-chatter.azurewebsites.net"
+  },
+
+  "community": {
+    "serviceUri": "https://higi-qa-core-community.azurewebsites.net",
+    "orgPoliciesUri": "https://web-qa.superbuddytime.com/termsinfo"
+  },
+
+  "currency": {
+    "serviceUri": "https://higi-qa-core-currency.azurewebsites.net"
+  },
+
+  "dataApi": {
+    "apiClientId": "231c7f1b-9cdc-489b-bb98-ec88b9cace92",
+    "apiAppKey": "8sPnhDsutaOtAZWpUyvOk6TNDqPSklyL0w7BxREeVRI="
+  },
+
+  "events": {
+    "serviceUri": "https://higi-qa-core-event.azurewebsites.net",
+    "amplitudeUserEventsKey": "e5863f04789bc0f01111ed9200ccc335",
+    "amplitudeKioskEventsKey": "949eba9f7cd6cc2e49bbf7737a8ecb6b",
+    "replayAppClientId": "1a625911-ac17-4dbc-b103-e399b942c00f",
+    "replayAppLogoutRedirectUri": "https://higi-dev-core-replay.azurewebsites.net/.auth/login/aad/callback",
+    "userDbConnectionString": "data source=65.60.87.148;initial catalog=higi-qa-core;persist security info=True;user id=higi-core;password=83e29e46;MultipleActiveResultSets=True;App=EntityFramework",
+    "snowflakeUserIdEncryptionKeyName": "higi_events_user_anon_id_key_name",
+    "nonStripedAzureStorage": [
+      {
+        "accountName": "coreeventqa",
+        "accountKey": "l2ITRlgpMEd4vXE36tgW8nueCD/vDAha7cUKb4GVdCT0JnGEI34vcWp5AshUN/crGeTH99LI1b2Y8ZfBL+TI1w=="
+      }
+    ],
+    "adReportingNonStripedAzureStorage": [
+      {
+        "accountName": "higiqastore001",
+        "accountKey": "Zieib7kEhlY7ycWU5b5Jx2INMeLOQ4GcH0BP1OLqFp+7g1QODkPHMMHHyAu5CWQ8/h1Spg8VkGAfMZ2y6h//mQ=="
+      }
+    ],
+    "adSurveyReportingNonStripedAzureStorage" : [
+      {
+        "accountName": "adsurveyreportsqa",
+        "accountKey": "uBo6vHh0y9p/i321n/u6JUI8zqc+9ycxo8B0D3vaw2uPqpsdaTqQtWP5vv3SUfleEQd/20BYSU7nzzKYNxDJZg=="
+      }
+    ],
+    "AWSAccessKey": "AKIAJAVWTPBV7GYQDJIQ",
+    "AWSSecretKey": "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",
+    "S3Bucket": "higi-bucket"
+  },
+
+  "feed": {
+    "serviceUri": "https://higi-qa-core-feed.azurewebsites.net"
+  },
+
+  "higiScore": {
+    "serviceUri": "https://higi-qa-core-higiscore.azurewebsites.net"
+  },
+
+  "image": {
+    "serviceUri": "https://higi-qa-core-image.azurewebsites.net",
+    "cdnHost": "https://higi-qa-core-image-api.azureedge.net"
+  },
+
+  "leaderboard": {
+    "serviceUri": "https://higi-qa-core-leaderboard.azurewebsites.net"
+  },
+
+  "legacy": {
+    "higiApiUri": "https://apiqa.superbuddytime.com",
+    "higiApiToken": "N3ougVCHl5YMQl75UHACAyFO2LCKatjrsejonNgkOCtR6nEDKXp63CbkUS64wPv2cwaWBVIzonxs+UXHxpWL22N+ud3s5Y4Pg5xTIAj8YcsBAA==",
+    "legacyIntegrationToken": "N3ougVCHl5YMQl75UHACAyFO2LCKatjrsejonNgkOCtR6nEDKXp63CbkUS64wPv2cwaWBVIzonxs+UXHxpWL22N+ud3s5Y4Pg5xTIAj8YcsBAA==",
+    "earnditUri": "https://earndit-qa.superbuddytime.com/api",
+    "earnditToken": "CLpGCceneg4aJiDtFlC9ceLvh4ffwFm6qYb5g5VPe2ami3CSm9tbIb5naauSOtYf",
+    "earnditSqlUser": "migrations",
+    "earnditSqlHost": "191.238.57.198",
+    "earnditSqlPass": "dntEo8fWG5TlY3wM2noEAshvhRhQBo7f",
+    "earnditSqlDb": "earndit",
+    "apiClientId": "0a59bd6c-a8c7-4597-8abd-3b7f502b35f8",
+    "apiAppKey": "u8nZXYc7agHpVvi8S0CIoEuTEqHiO0dk1iki0APSVms=",
+    "portalBaseUri": "https://webqa.superbuddytime.com",
+    "legacyIntegrationUri": "https://higi-qa-core-legacy-integration-api.azurewebsites.net/api"
+  },
+
+  "localization": {
+    "serviceUri": "https://higi-qa-core-localization.azurewebsites.net",
+    "searchName": "higi-qa-core-localization",
+    "searchUri": "https://higi-qa-core-localization.search.windows.net",
+    "searchKey": "8B5566D3D5DC8358E84FF1A6B9BAB4DC"
+  },
+
+  "logging": {
+    "applicationLoggingEndpoint": "https://endpoint1.collection.us2.sumologic.com/receiver/v1/http/ZaVnC4dhaV1eqoY5A3e3g6_Ks8QpoA2Dz_7HhDC8I2Ozm8JOszzoq_Q7cGMFlZlP6CuIzH0bWk9s26GQUrt6WqEggK0pzmDO6sOcgH70qIDzbpwbNC6R2w==",
+    "auditLoggingEndpoint": "https://endpoint1.collection.us2.sumologic.com/receiver/v1/http/ZaVnC4dhaV1and1akJthWB8H-0aNjLYegI96CPbuVvUFY8uDQQ9u8B4_VCjrdrQJJ8FPpdszytmOQb3jDCJXYW9iJWVAZFEnH3JKfwa15Clx8hLh24VHvA==",
+    "stripedAzureStorage": [
+      {
+        "accountName": "coreloggingqa001",
+        "accountKey": "LyE+3reAShdjYDJa/RzszquM+7bLp3MfjPqsGbc/C/E1K8ev6OIZwuUxrZIftMu97OHt5KhEtrlzbcQwknFu0Q=="
+      },
+      {
+        "accountName": "coreloggingqa002",
+        "accountKey": "nQ8H6Oz/2+DwfL2FTDIx8MVUvnVW/TG1iaF+7ib5dVV4ThViJtmOOQ/UsMScv14isnz62vNPHyPDRzPNyxKkcw=="
+      },
+      {
+        "accountName": "coreloggingqa003",
+        "accountKey": "Nw84BERCPgfafOkYQkglslI49JLbJ8GCqEZgHBS0kggW1DJn3fjK12OdfgCQnwfzcmAMUT5YLAnjEVXFOkb2dg=="
+      }
+    ]
+  },
+
+  "notification": {
+    "serviceUri": "https://higi-qa-core-notifications.azurewebsites.net",
+    "notificationRecordHashSalt": "p3TowfmfIkm1WoAgDfnd1A"
+  },
+
+  "oauth2Audiences": {
+    "higi": {
+      "resourceServerId": "eef78bea7c89428e98db6ad2cdcfd775",
+      "resourceServerSecret": "f_gqxS-3r28UxTHN0WVAcWqc8zgWJIdXKkMJ-2pT1bg"
+    },
+    "bcsdk": {
+      "resourceServerId": "c82e8e26e69c40d0b7fb69b7b75b3c3b",
+      "resourceServerSecret": "aRpsRAlMjOvP2iEVOqT62z2VN3GOcws0rZHmJEs5FmM"
+    },
+    "dataApi": {
+      "resourceServerId": "eef78bea7c89428e98db6ad2cdcfd775",
+      "resourceServerSecret": "f_gqxS-3r28UxTHN0WVAcWqc8zgWJIdXKkMJ-2pT1bg"
+    }
+  },
+
+  "point": {
+    "serviceUri": "https://higi-qa-core-points.azurewebsites.net",
+    "eventTopic": "UserEvents-Points"
+  },
+
+  "survey": {
+    "serviceUri": "https://higi-qa-core-surveyservice.azurewebsites.net"
+  },
+
+  "thirdparty": {
+    "serviceUri": "https://higi-qa-core-thirdparty.azurewebsites.net",
+    "pcPlus": {
+      "baseUri": "https://162.53.255.77:443/",
+      "appId": "HIGISYSUSER",
+      "appSecret": "pass4HIGI",
+      "offerTemplateId": "9000026918",
+      "partnershipId": "0005000014"
+    },
+    "loblaws": {
+      "sftp": {
+        "ipAddress": "162.53.255.5",
+        "port": 22,
+        "username": "qhigb01",
+        "password": "New10Day"
+      }
+    }
+  },
+
+  "user": {
+    "serviceUri": "https://higi-qa-core-user.azurewebsites.net",
+    "keyVaultKeyId": "https://higiqauserkeyvault.vault.azure.net:443/keys/jPugMlMOs02lUvpuQMkQ3g/7e44bb495a154717a21617ec71d35064",
+    "searchName": "higi-qa-core-user",
+    "searchUri": "https://higi-qa-core-user.search.windows.net",
+    "searchKey": "0DA66C6A57386C346868910E78420365",
+    "keyVaultKeyIds": [
+      "https://higi-qa-keyvault001.vault.azure.net/keys/UserEncryptionShared/a9452cf2a8db4dbbac498868539263d1",
+      "https://higi-qa-keyvault002.vault.azure.net/keys/UserEncryptionShared/a9452cf2a8db4dbbac498868539263d1",
+      "https://higi-qa-keyvault003.vault.azure.net/keys/UserEncryptionShared/a9452cf2a8db4dbbac498868539263d1",
+      "https://higi-qa-keyvault004.vault.azure.net/keys/UserEncryptionShared/a9452cf2a8db4dbbac498868539263d1",
+      "https://higi-qa-keyvault005.vault.azure.net/keys/UserEncryptionShared/a9452cf2a8db4dbbac498868539263d1",
+      "https://higi-qa-keyvault006.vault.azure.net/keys/UserEncryptionShared/a9452cf2a8db4dbbac498868539263d1",
+      "https://higi-qa-keyvault007.vault.azure.net/keys/UserEncryptionShared/a9452cf2a8db4dbbac498868539263d1",
+      "https://higi-qa-keyvault008.vault.azure.net/keys/UserEncryptionShared/a9452cf2a8db4dbbac498868539263d1",
+      "https://higi-qa-keyvault009.vault.azure.net/keys/UserEncryptionShared/a9452cf2a8db4dbbac498868539263d1",
+      "https://higi-qa-keyvault010.vault.azure.net/keys/UserEncryptionShared/a9452cf2a8db4dbbac498868539263d1"
+    ]
+  }
+}
