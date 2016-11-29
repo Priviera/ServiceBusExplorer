@@ -31,6 +31,8 @@ using System.Text;
 using System.Windows.Forms;
 using System.Drawing;
 using Microsoft.ServiceBus.Messaging;
+using Higi.Core.Security;
+using Higi.Core.Security.Clients;
 #endregion
 
 namespace Microsoft.WindowsAzure.CAT.ServiceBusExplorer
@@ -78,6 +80,7 @@ namespace Microsoft.WindowsAzure.CAT.ServiceBusExplorer
         private readonly ServiceBusHelper serviceBusHelper;
         private readonly WriteToLogDelegate writeToLog;
         private readonly BindingSource bindingSource = new BindingSource();
+        private readonly KeyVaultHelper _keyVaultHelper = KeyVaultHelper.BuildKeyVaultHelperAsync(new SharedKeyVaultClient(), "higi-shared-sb-kv-encryption-key-name").GetAwaiter().GetResult();
         #endregion
 
         #region Private Static Fields
@@ -290,6 +293,16 @@ namespace Microsoft.WindowsAzure.CAT.ServiceBusExplorer
                         if (bodyType == BodyType.ByteArray)
                         {
                             message = brokeredMessage.CloneWithByteArrayBodyType(txtMessageText.Text);
+                        }
+                        else if (bodyType == BodyType.Stream)
+                        {
+                            var bytes = Encoding.UTF8.GetBytes(txtMessageText.Text);
+                            if (brokeredMessage.Properties.ContainsKey("higiSecureMessage"))
+                            {
+                                bytes = _keyVaultHelper.EncryptAsync(bytes).GetAwaiter().GetResult();
+                            }
+                            var stream = new MemoryStream(bytes);
+                            message = brokeredMessage.Clone(stream);
                         }
                         else
                         {

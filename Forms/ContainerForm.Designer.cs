@@ -296,7 +296,7 @@ namespace Microsoft.WindowsAzure.CAT.ServiceBusExplorer
             this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
             this.aboutToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.A)));
             this.aboutToolStripMenuItem.Size = new System.Drawing.Size(252, 22);
-            this.aboutToolStripMenuItem.Text = "&About Service Bus Explorer";
+            this.aboutToolStripMenuItem.Text = "&About higi Service Bus Explorer";
             this.aboutToolStripMenuItem.Click += new System.EventHandler(this.aboutToolStripMenuItem_Click);
             // 
             // viewToolStripMenuItem
@@ -425,7 +425,7 @@ namespace Microsoft.WindowsAzure.CAT.ServiceBusExplorer
             this.toolStripMenuItem10.Name = "toolStripMenuItem10";
             this.toolStripMenuItem10.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.A)));
             this.toolStripMenuItem10.Size = new System.Drawing.Size(252, 22);
-            this.toolStripMenuItem10.Text = "&About Service Bus Explorer";
+            this.toolStripMenuItem10.Text = "&About higi Service Bus Explorer";
             this.toolStripMenuItem10.Click += new System.EventHandler(this.aboutToolStripMenuItem_Click);
             // 
             // logoPictureBox

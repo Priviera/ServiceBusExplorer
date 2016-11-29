@@ -104,7 +104,7 @@ namespace Microsoft.WindowsAzure.CAT.ServiceBusExplorer
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(158, 16);
             this.label2.TabIndex = 41;
-            this.label2.Text = "Service Bus Explorer";
+            this.label2.Text = "higi Service Bus Explorer";
             // 
             // mailLinkLabel
             // 
@@ -201,7 +201,7 @@ namespace Microsoft.WindowsAzure.CAT.ServiceBusExplorer
             this.MinimizeBox = false;
             this.Name = "AboutForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = " About Service Bus Explorer 3.4.2";
+            this.Text = " About higi Service Bus Explorer 3.4.2";
             this.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.AboutForm_KeyPress);
             this.ResumeLayout(false);
             this.PerformLayout();

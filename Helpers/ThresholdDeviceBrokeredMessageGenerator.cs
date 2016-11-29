@@ -108,7 +108,7 @@ namespace Microsoft.WindowsAzure.CAT.ServiceBusExplorer
             MaxValue = 100;
             City = "Milan";
             Country = "Italy";
-            Label = "Service Bus Explorer";
+            Label = "higi Service Bus Explorer";
         } 
         #endregion
 

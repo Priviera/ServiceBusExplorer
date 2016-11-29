@@ -107,7 +107,7 @@ namespace Microsoft.WindowsAzure.CAT.ServiceBusExplorer
             AlertState = (int)OnOff.Off;
             City = "Milan";
             Country = "Italy";
-            Label = "Service Bus Explorer";
+            Label = "higi Service Bus Explorer";
         } 
         #endregion
 

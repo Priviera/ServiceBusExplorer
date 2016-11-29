@@ -515,7 +515,7 @@
             this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
             this.aboutToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.A)));
             this.aboutToolStripMenuItem.Size = new System.Drawing.Size(252, 22);
-            this.aboutToolStripMenuItem.Text = "&About Service Bus Explorer";
+            this.aboutToolStripMenuItem.Text = "&higi About Service Bus Explorer";
             this.aboutToolStripMenuItem.Click += new System.EventHandler(this.aboutToolStripMenuItem_Click);
             // 
             // statusStrip
@@ -2676,7 +2676,7 @@
             this.KeyPreview = true;
             this.Name = "MainForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Service Bus Explorer 3.4.2";
+            this.Text = "higi Service Bus Explorer 3.4.2";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.MainForm_FormClosing);
             this.Shown += new System.EventHandler(this.MainForm_Shown);
             this.ResizeBegin += new System.EventHandler(this.MainForm_ResizeBegin);

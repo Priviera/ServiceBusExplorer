@@ -178,7 +178,7 @@ namespace Microsoft.WindowsAzure.CAT.ServiceBusExplorer
         private const string SaveAsFilter = "Text Documents|*.txt";
         private const string XmlFilter = "XML Files|*.xml";
         private const string DefaultMessageText = "Hi mate, how are you?";
-        private const string DefaultLabel = "Service Bus Explorer";
+        private const string DefaultLabel = "higi Service Bus Explorer";
         private const string ImportToolStripMenuItemName = "importEntityMenuItem2";
         private const string ImportToolStripMenuItemText = "Import Entities";
         private const string ImportToolStripMenuItemToolTipText = "Import entity definition from file.";
